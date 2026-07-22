@@ -46,3 +46,22 @@ next-env.d.ts
 
 # ai tooling cache
 .openai/
+
+# unused framework starter (this project ships as a static site)
+/app/
+/build/
+/db/
+/drizzle/
+/examples/
+/public/
+/tests/
+/worker/
+/drizzle.config.ts
+/eslint.config.mjs
+/next.config.ts
+/package.json
+/package-lock.json
+/pnpm-lock.yaml
+/postcss.config.mjs
+/tsconfig.json
+/vite.config.ts
