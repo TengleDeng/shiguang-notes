@@ -44,24 +44,4 @@ next-env.d.ts
 # package manager local store
 .pnpm-store/
 
-# ai tooling cache
-.openai/
-
-# unused framework starter (this project ships as a static site)
-/app/
-/build/
-/db/
-/drizzle/
-/examples/
-/public/
-/tests/
-/worker/
-/drizzle.config.ts
-/eslint.config.mjs
-/next.config.ts
-/package.json
-/package-lock.json
-/pnpm-lock.yaml
-/postcss.config.mjs
-/tsconfig.json
-/vite.config.ts
+# framework source, examples, tests, and configuration are intentionally tracked
