@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="拾光笔记——一款温暖、轻盈的个人笔记工作台。" />
+    <title>拾光笔记 · 个人灵感工作台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="主导航">
+        <div class="brand"><span class="brand-mark">拾</span><span>拾光笔记</span></div>
+        <button class="new-note" id="newNoteButton"><span>＋</span> 新建笔记</button>
+        <nav class="nav-list">
+          <button class="nav-item active" data-filter="all"><span>⌂</span>首页<span class="count">12</span></button>
+          <button class="nav-item" data-filter="note"><span>▤</span>所有笔记<span class="count">28</span></button>
+          <button class="nav-item" data-filter="task"><span>✓</span>待办任务<span class="count accent">5</span></button>
+          <button class="nav-item" data-filter="image"><span>▧</span>图片收藏<span class="count">16</span></button>
+        </nav>
+        <p class="nav-label">资料库</p>
+        <nav class="nav-list compact">
+          <button class="nav-item"><i class="dot green"></i>工作</button>
+          <button class="nav-item"><i class="dot orange"></i>生活</button>
+          <button class="nav-item"><i class="dot blue"></i>阅读</button>
+          <button class="nav-item"><i class="dot pink"></i>灵感</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="storage-row"><span>本地空间</span><span>68%</span></div>
+          <div class="storage-track"><i></i></div>
+          <div class="profile"><div class="avatar">禾</div><div><strong>小禾</strong><small>保持好奇，持续记录</small></div><button aria-label="更多">•••</button></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobileMenu" aria-label="打开菜单">☰</button>
+          <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="搜索笔记、标签或内容..." aria-label="搜索笔记" /><kbd>⌘ K</kbd></div>
+          <div class="top-actions"><button aria-label="通知">♧<i></i></button><button aria-label="帮助">?</button></div>
+        </header>
+
+        <section class="welcome">
+          <div><p class="eyebrow">2026 年 7 月 22 日 · 星期三</p><h1>下午好，小禾 <span>✦</span></h1><p>把脑海里的微光，慢慢收集成属于你的星河。</p></div>
+          <div class="weather"><span>☀</span><div><strong>27°C</strong><small>上海 · 晴朗</small></div></div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card sage"><div class="stat-icon">▤</div><div><small>本周笔记</small><strong>12</strong><span>比上周多 4 篇 ↗</span></div><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="stat-card peach"><div class="stat-icon">✓</div><div><small>任务完成</small><strong>8<em>/13</em></strong><span>今天再完成 2 项</span></div><div class="progress-ring"><span>62%</span></div></article>
+          <article class="quote-card"><span class="quote-mark">“</span><p>真正的发现之旅，不在于寻找新的风景，而在于拥有新的眼睛。</p><footer>— 马塞尔·普鲁斯特</footer></article>
+        </section>
+
+        <div class="content-grid">
+          <section class="notes-section">
+            <div class="section-heading"><div><h2>最近笔记</h2><p>继续书写未完成的想法</p></div><button id="viewAll">查看全部 →</button></div>
+            <div class="note-grid" id="noteGrid">
+              <article class="note-card featured" data-type="note" data-search="盛夏去海边 旅行 厦门 海风 日落"><div class="cover seaside"><span>旅行手记</span><div class="sun"></div><div class="wave one"></div><div class="wave two"></div></div><div class="note-body"><div class="note-meta"><span class="tag travel">旅行</span><time>2 小时前</time></div><h3>盛夏去海边</h3><p>想去一个有风的地方，早起看海，傍晚在橘色的日落里散步……</p><div class="note-footer"><span>☷ 6 分钟阅读</span><button class="star active" aria-label="收藏">★</button></div></div></article>
+              <article class="note-card" data-type="note" data-search="微习惯 阅读 摘录 成长"><div class="note-body"><div class="note-meta"><span class="tag reading">阅读</span><time>昨天</time></div><h3>《微习惯》的三个启发</h3><p>从小得不可思议的动作开始。重要的不是一次做多少，而是让行动自然发生。</p><blockquote>“每天进步一点点，也是在靠近理想的自己。”</blockquote><div class="note-footer"><span>☷ 4 分钟阅读</span><button class="star" aria-label="收藏">☆</button></div></div></article>
+              <article class="note-card checklist-card" data-type="task" data-search="周末采购清单 任务 牛奶 鲜花 咖啡"><div class="note-body"><div class="note-meta"><span class="tag life">生活</span><time>今天</time></div><h3>周末采购清单</h3><div class="mini-tasks"><label><input type="checkbox" checked /><span>燕麦奶和咖啡豆</span></label><label><input type="checkbox" /><span>一束白色洋桔梗</span></label><label><input type="checkbox" /><span>补充厨房香料</span></label></div><div class="note-footer"><span>1 / 3 已完成</span><button class="star" aria-label="收藏">☆</button></div></div></article>
+              <article class="note-card photo-card" data-type="image" data-search="城市散步 图片 建筑 光影"><div class="photo-mosaic"><div class="photo warm"><span>午后</span></div><div class="photo architecture"></div><div class="photo shadow"></div></div><div class="note-body"><div class="note-meta"><span class="tag idea">灵感</span><time>7 月 20 日</time></div><h3>城市散步 · 光影收藏</h3><p>把路过的颜色与影子留在这里。</p><div class="note-footer"><span>▧ 12 张图片</span><button class="star active" aria-label="收藏">★</button></div></div></article>
+            </div>
+            <div class="empty-state" id="emptyState"><span>⌕</span><h3>没有找到相关内容</h3><p>换一个关键词试试看吧。</p></div>
+          </section>
+
+          <aside class="right-panel">
+            <section class="today-card"><div class="section-heading small"><div><h2>今日待办</h2><p><span id="doneCount">2</span> / 5 已完成</p></div><button aria-label="新增任务">＋</button></div><div class="task-list" id="taskList">
+              <label><input type="checkbox" checked /><i></i><span><strong>整理项目会议笔记</strong><small>09:30 · 工作</small></span></label>
+              <label><input type="checkbox" checked /><i></i><span><strong>回复小林的邮件</strong><small>11:00 · 工作</small></span></label>
+              <label><input type="checkbox" /><i></i><span><strong>阅读 30 分钟</strong><small>18:30 · 阅读</small></span></label>
+              <label><input type="checkbox" /><i></i><span><strong>整理旅行照片</strong><small>20:00 · 生活</small></span></label>
+              <label><input type="checkbox" /><i></i><span><strong>记录今天的三个瞬间</strong><small>睡前 · 日记</small></span></label>
+            </div><button class="all-tasks">查看全部任务 <span>→</span></button></section>
+
+            <section class="inspiration-card"><div class="section-heading small"><div><h2>灵感拼贴</h2><p>最近收藏的美好</p></div><button>•••</button></div><div class="moodboard"><div class="mood coffee"><span>slow<br/>morning</span></div><div class="mood leaf"></div><div class="mood paper"><span>在日常里<br/>寻找诗意</span></div><div class="mood sky"></div><div class="tape"></div></div><div class="mood-tags"><span>#松弛感</span><span>#自然</span><span>#日常美学</span></div></section>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal" id="noteModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <form class="modal-card" id="noteForm"><div class="modal-header"><div><p>捕捉此刻</p><h2>新建一篇笔记</h2></div><button type="button" data-close="true" aria-label="关闭">×</button></div><label>标题<input id="noteTitle" required placeholder="给这篇笔记起个名字" /></label><label>内容<textarea id="noteContent" rows="5" placeholder="写下你的想法..."></textarea></label><div class="modal-tags"><button type="button" class="selected">灵感</button><button type="button">生活</button><button type="button">阅读</button><button type="button">工作</button></div><div class="modal-actions"><button type="button" data-close="true">取消</button><button type="submit">保存笔记</button></div></form>
+    </div>
+    <div class="toast" id="toast">笔记已保存到本地 ✦</div>
+    <script src="script.js"></script>
+  </body>
+</html>
